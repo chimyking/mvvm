@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- MVVM 双向数据绑定，MVVM angular 脏值检测  vue:数据劫持+发布订阅模式 -->
+
+    <!-- 不兼容 低版本Object.defineProperty -->
+
+
+
+    <script>
+        let obj = {}
+
+        Object.defineProperty(obj, 'school', {
+            configurable: true, // 是否可删除
+            enumerable: true, // 是否可枚举
+            // writable: true, // 是否可修改
+            // value: 'zfpx', // 属性值
+
+            // setter,getter 不能喝writbale和value同时存在
+            get() {
+                return 'zfpx'
+            },
+            set(newValue) {
+                value = newValue
+            }
+        })
+
+
+        console.log(obj)
+    </script>
+
+</body>
+
+</html>
